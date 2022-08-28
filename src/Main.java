@@ -11,6 +11,6 @@ public class Main extends Application {
     }
     
     public void start(Stage primaryStage) {
-        titleScreen.create(primaryStage);
+        titleScreen.createAndSet(primaryStage);
     }
 }
