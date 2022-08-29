@@ -28,7 +28,7 @@ public class titleScreen {
     public static void createAndSet(Stage primaryStage) {
         Pane root = new Pane();
 
-        Image imgBackground = new Image(System.getProperty("user.dir") + "/images/titleScreenBackground.png");
+        Image imgBackground = new Image("./././images/titleScreenBackground.png");
         ImageView ivBackground = new ImageView(imgBackground);
         root.getChildren().add(ivBackground);
 
@@ -121,7 +121,7 @@ public class titleScreen {
 	private static int getHighScore() {
 		int highScore = Integer.MIN_VALUE;
 
-		File scoresFile = new File(System.getProperty("user.dir") + "/data/scores.txt");
+		File scoresFile = new File("./././data/scores.txt");
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader(scoresFile));
@@ -156,7 +156,7 @@ public class titleScreen {
 			return highScoreHolders;
 		}
 
-		File scoresFile = new File(System.getProperty("user.dir") + "/data/scores.txt");
+		File scoresFile = new File("./././data/scores.txt");
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader(scoresFile));
