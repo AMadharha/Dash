@@ -46,7 +46,7 @@ public class gameScreen {
                                     imgGameBackground.getHeight());
         
         Label lblScore = new Label();
-		lblScore.setText("SCORE: " + score);
+		lblScore.setText("SCORE: 0");
 		lblScore.setFont(Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 40));
         lblScore.setTextFill(Color.WHITE);
 		lblScore.setLayoutX(20);
@@ -128,11 +128,13 @@ public class gameScreen {
 		} else {
 			coin.setX(510);
 		}
-		
+
+		score = 0;
+
 		KeyFrame kf2 = new KeyFrame(Duration.millis(100), new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent e) {
 				int cols = 0;
-
+				
 				if(player.isDead == false) {
 					board.move();
 					train.move();
@@ -249,7 +251,6 @@ public class gameScreen {
 					} catch(IOException err) {
 						err.printStackTrace();
 					}
-
 					endScreen.createAndSet(primaryStage, score, tfName);
 				}
 			}
