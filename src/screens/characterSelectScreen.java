@@ -2,7 +2,10 @@ package src.screens;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
@@ -40,10 +43,66 @@ public class characterSelectScreen {
         btnCharacterOne.setGraphic(ivCharacterOne);
         btnCharacterOne.setOnMouseEntered(e -> btnCharacterOne.setStyle("-fx-background-color: rgb(154,255,252,0.6)"));
         btnCharacterOne.setOnMouseExited(e -> btnCharacterOne.setStyle("-fx-background-color: transparent"));
-        btnCharacterOne.setLayoutX(100);
+        btnCharacterOne.setLayoutX(50);
         btnCharacterOne.setLayoutY(200);
+        btnCharacterOne.setOnAction(e -> {
+            int characterNum = 1;
+            if(isNameEmpty(tfName, characterNum, primaryStage) == false) {
+                gameScreen.createAndSet(tfName, characterNum, primaryStage);
+            }
+        });
         root.getChildren().add(btnCharacterOne);
 
+        Image imgCharacterTwo = new Image("./././images/characterTwo.png");
+        ImageView ivCharacterTwo = new ImageView(imgCharacterTwo);
+
+        Button btnCharacterTwo = new Button();
+        btnCharacterTwo.setStyle("-fx-background-color: transparent;");
+        btnCharacterTwo.setGraphic(ivCharacterTwo);
+        btnCharacterTwo.setOnMouseEntered(e -> btnCharacterTwo.setStyle("-fx-background-color: rgb(154,255,252,0.6)"));
+        btnCharacterTwo.setOnMouseExited(e -> btnCharacterTwo.setStyle("-fx-background-color: transparent"));
+        btnCharacterTwo.setLayoutX(450);
+        btnCharacterTwo.setLayoutY(200);
+        btnCharacterTwo.setOnAction(e -> {
+            int characterNum = 2;
+            if(isNameEmpty(tfName, characterNum, primaryStage) == false) {
+
+            }
+        });
+        root.getChildren().add(btnCharacterTwo);
+
+        Image imgCharacterThree = new Image("./././images/characterThree.png");
+        ImageView ivCharacterThree = new ImageView(imgCharacterThree);
+
+        Button btnCharacterThree = new Button();
+        btnCharacterThree.setStyle("-fx-background-color: transparent");
+        btnCharacterThree.setGraphic(ivCharacterThree);
+        btnCharacterThree.setOnMouseEntered(e -> btnCharacterThree.setStyle("-fx-background-color: rgb(154,255,252,0.6)"));
+        btnCharacterThree.setOnMouseExited(e -> btnCharacterThree.setStyle("-fx-background-color: transparent"));
+        btnCharacterThree.setLayoutX(850);
+        btnCharacterThree.setLayoutY(200);
+        btnCharacterThree.setOnAction(e -> {
+            int characterNum = 3;
+            if(isNameEmpty(tfName, characterNum, primaryStage) == false) {
+
+            }
+        });
+        root.getChildren().add(btnCharacterThree);
+
         primaryStage.setScene(sceneCharacter);
+    }
+
+    private static boolean isNameEmpty(TextField tfName, int characterNum, Stage primaryStage) {
+        while(tfName.getText() == null || tfName.getText().trim().isEmpty()) {
+            Alert alrtNoName = new Alert(AlertType.ERROR);
+	        alrtNoName.setContentText("Please enter a username before selecting a character!");
+	        alrtNoName.setTitle("Exit");
+	        alrtNoName.setHeaderText(null);
+	        alrtNoName.getButtonTypes().clear();
+			alrtNoName.getButtonTypes().add(ButtonType.OK);
+            alrtNoName.showAndWait();
+            return true; 
+        }
+        return false;
     }
 }
