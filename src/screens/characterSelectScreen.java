@@ -47,7 +47,7 @@ public class characterSelectScreen {
         btnCharacterOne.setLayoutY(200);
         btnCharacterOne.setOnAction(e -> {
             int characterNum = 1;
-            if(isNameEmpty(tfName, characterNum, primaryStage) == false) {
+            if(isValidName(tfName, characterNum, primaryStage) == true) {
                 gameScreen.createAndSet(tfName, characterNum, primaryStage);
             }
         });
@@ -65,9 +65,9 @@ public class characterSelectScreen {
         btnCharacterTwo.setLayoutY(200);
         btnCharacterTwo.setOnAction(e -> {
             int characterNum = 2;
-            if(isNameEmpty(tfName, characterNum, primaryStage) == false) {
-
-            }
+            if(isValidName(tfName, characterNum, primaryStage) == true) {
+                gameScreen.createAndSet(tfName, characterNum, primaryStage);
+            }   
         });
         root.getChildren().add(btnCharacterTwo);
 
@@ -83,8 +83,8 @@ public class characterSelectScreen {
         btnCharacterThree.setLayoutY(200);
         btnCharacterThree.setOnAction(e -> {
             int characterNum = 3;
-            if(isNameEmpty(tfName, characterNum, primaryStage) == false) {
-
+            if(isValidName(tfName, characterNum, primaryStage) == true) {
+                gameScreen.createAndSet(tfName, characterNum, primaryStage);
             }
         });
         root.getChildren().add(btnCharacterThree);
@@ -92,17 +92,17 @@ public class characterSelectScreen {
         primaryStage.setScene(sceneCharacter);
     }
 
-    private static boolean isNameEmpty(TextField tfName, int characterNum, Stage primaryStage) {
-        while(tfName.getText() == null || tfName.getText().trim().isEmpty()) {
+    private static boolean isValidName(TextField tfName, int characterNum, Stage primaryStage) {
+        if(tfName.getText() == null || tfName.getText().trim().isEmpty() || tfName.getText().contains("=")) {
             Alert alrtNoName = new Alert(AlertType.ERROR);
-	        alrtNoName.setContentText("Please enter a username before selecting a character!");
+	        alrtNoName.setContentText("Please enter a valid username before selecting a character!");
 	        alrtNoName.setTitle("Exit");
 	        alrtNoName.setHeaderText(null);
 	        alrtNoName.getButtonTypes().clear();
 			alrtNoName.getButtonTypes().add(ButtonType.OK);
             alrtNoName.showAndWait();
-            return true; 
+            return false; 
         }
-        return false;
+        return true;
     }
 }
