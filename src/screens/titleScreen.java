@@ -64,8 +64,6 @@ public class titleScreen {
 			alrtControls.showAndWait();
 		});
 
-		int highScore = getHighScore();
-		ArrayList<String> highScoreHolders = getHighScoreHolder(highScore);
 		Button btnHighScore = new Button();
 		btnHighScore.setPrefSize(300,80);
 		btnHighScore.setText("HIGH SCORE");
@@ -75,6 +73,9 @@ public class titleScreen {
 		btnHighScore.setOnMouseEntered(e -> btnHighScore.setStyle("-fx-background-color: lightblue; -fx-border-color: black; -fx-border-width: 3 3 3 3;"));
 		btnHighScore.setOnMouseExited(e -> btnHighScore.setStyle("-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3 3 3 3;"));
 		btnHighScore.setOnAction(e -> {
+			int highScore = getHighScore();
+			ArrayList<String> highScoreHolders = getHighScoreHolder(highScore);
+
 			Alert alrtHighScore = new Alert(AlertType.INFORMATION);
 			alrtHighScore.setHeaderText(null);
 			if(highScore == -1) {
@@ -130,37 +131,38 @@ public class titleScreen {
 				return -1;
 			}
 			else {
+				br.close();
+				BufferedReader br2 = new BufferedReader(new FileReader(scoresFile));
 				int sepPos = 0;
 				int curScore = 0;
 				String curLine = null;
-				while((curLine = br.readLine()) != null) {
+				while((curLine = br2.readLine()) != null) {
 					sepPos = curLine.indexOf("=");
 					curScore = Integer.parseInt(curLine.substring(sepPos+1));
 					if(curScore > highScore) {
 						highScore = curScore;
 					}
 				}
+				br2.close();
 			}
-			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
+		}		
 		return highScore;
 	}
 
 	private static ArrayList<String> getHighScoreHolder(int highScore) {
 		ArrayList<String> highScoreHolders = new ArrayList<>();
-
+		
 		if(highScore == -1) {
 			return highScoreHolders;
 		}
-
+		
 		File scoresFile = new File("./././resources/scores.txt");
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader(scoresFile));
-			String curLine = br.readLine();
+			String curLine = null;
 			int sepPos = 0;
 			int score = 0;
 			while((curLine = br.readLine()) != null) {
@@ -170,6 +172,7 @@ public class titleScreen {
 					highScoreHolders.add(curLine.substring(0,sepPos));
 				}
 			}
+			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
