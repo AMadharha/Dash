@@ -1,5 +1,8 @@
 package src.screens;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -238,8 +241,16 @@ public class gameScreen {
 						e1.printStackTrace();
 					}
 
-					//createEndScreen(primaryStage);
-					//primaryStage.setScene(endScreen);
+					try {
+						FileWriter writer = new FileWriter("./././resources/scores.txt");
+						BufferedWriter bw = new BufferedWriter(writer);
+						bw.write(tfName.getText() + "=" + score);
+						bw.close();
+					} catch(IOException err) {
+						err.printStackTrace();
+					}
+
+					endScreen.createAndSet(primaryStage, score, tfName);
 				}
 			}
 		});
