@@ -121,7 +121,7 @@ public class titleScreen {
 	private static int getHighScore() {
 		int highScore = Integer.MIN_VALUE;
 
-		File scoresFile = new File("./././data/scores.txt");
+		File scoresFile = new File("./././resources/scores.txt");
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader(scoresFile));
@@ -156,7 +156,7 @@ public class titleScreen {
 			return highScoreHolders;
 		}
 
-		File scoresFile = new File("./././data/scores.txt");
+		File scoresFile = new File("./././resources/scores.txt");
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader(scoresFile));
