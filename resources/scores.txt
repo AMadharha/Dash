@@ -1,0 +1,3 @@
+ankush=8
+my friend=30
+pa=1
