@@ -96,7 +96,7 @@ public class characterSelectScreen {
         if(tfName.getText() == null || tfName.getText().trim().isEmpty() || tfName.getText().contains("=")) {
             Alert alrtNoName = new Alert(AlertType.ERROR);
 	        alrtNoName.setContentText("Please enter a valid username before selecting a character!");
-	        alrtNoName.setTitle("Exit");
+	        alrtNoName.setTitle("Invalid Name");
 	        alrtNoName.setHeaderText(null);
 	        alrtNoName.getButtonTypes().clear();
 			alrtNoName.getButtonTypes().add(ButtonType.OK);
