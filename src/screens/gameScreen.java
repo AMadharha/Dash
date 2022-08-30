@@ -242,9 +242,9 @@ public class gameScreen {
 					}
 
 					try {
-						FileWriter writer = new FileWriter("./././resources/scores.txt");
+						FileWriter writer = new FileWriter("./././resources/scores.txt", true);
 						BufferedWriter bw = new BufferedWriter(writer);
-						bw.write(tfName.getText() + "=" + score);
+						bw.write(tfName.getText() + "=" + score + "\n");
 						bw.close();
 					} catch(IOException err) {
 						err.printStackTrace();
