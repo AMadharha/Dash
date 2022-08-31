@@ -15,7 +15,7 @@ This is the **character select screen**, this is where you enter your name and s
 
 This is sample **gameplay**. It does look slow, but the game quickens as your score goes up, with the max speed reached at 40 score:
 
-<img src="https://raw.githubusercontent.com/AMadharha/Dash/master/samples/gameplaySample.gif" width="1200" height="750" />
+<img src="/sample/gameplaySample.gif?raw=true" width="200px" />
 
 Finally, this is the **end screen** when you die in the game. You can either play again or exit the game: 
 
