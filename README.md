@@ -26,3 +26,24 @@ Finally, this is the **end screen** when you die in the game. You can either pla
 ## Operating System:
 Windows download: [Dash(Win).zip](https://raw.githubusercontent.com/AMadharha/Dash/master/downloads/Dash(Win).zip) \
 Mac download: Coming Soon
+
+## Downloading Steps:
+1. Download the [JDK version 18.0.2.1](https://www.oracle.com/java/technologies/downloads/). Skip this if you already have it
+2. Download the zip file according to your operating system.
+3. Extract the zip file to a location of your choosing.
+4. Open the run.bat file that is in Dash folder that you extracted. Windows Defender might step in here saying the file is not trustworthy. In this case, click "More Info" and click "Run anyway" (You can trust me).
+
+At this point the game should run and you can play away!
+
+# Troubleshooting
+## Java is not dealing with your `.jar` files:
+If you see that the `Dash.jar` file is not being opened with by Java (it is in the extracted folder from the `.zip`), you must change the app that `.jar` files are opened with. On your system, you might see the `.jar` file with a WinRAR icon or some other app. First, make sure you have done the first step shown in the Downloading Steps. 
+
+To Fix this issue (Windows):
+1. Open up your Settings
+2. Apps (Left Side)
+3. Default Apps
+4. Scroll all the way down to "Choose defaults by file type" under "Related settings"
+5. Type in `.jar` into the search bar
+6. Change the app to Java(TM) Platform SE binary (the java app that pops up)
+
