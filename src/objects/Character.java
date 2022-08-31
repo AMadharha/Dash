@@ -1,5 +1,7 @@
 package src.objects;
 
+import java.net.URL;
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -19,20 +21,22 @@ public class Character {
 		imgRun = new Image[2];
 
 		if(character == 1) {
-			imgRun[0] = new Image("./././images/characterOne-run1.png");
-			imgRun[1] = new Image("./././images/characterOne-run2.png");
+			URL charOneRun1URL = getClass().getResource("images/characterOne-run1.png");
+			URL charOneRun2URL = getClass().getResource("images/characterOne-run2.png");
+			imgRun[0] = new Image(charOneRun1URL.toExternalForm());
+			imgRun[1] = new Image(charOneRun2URL.toExternalForm());
 		}
 		else if(character == 2) {
-			imgRun[0] = new Image("./././images/characterTwo-run1.png");
-			imgRun[1] = new Image("./././images/characterTwo-run2.png");
+			URL charTwoRun1URL = getClass().getResource("images/characterTwo-run1.png");
+			URL charTwoRun2URL = getClass().getResource("images/characterTwo-run2.png");
+			imgRun[0] = new Image(charTwoRun1URL.toExternalForm());
+			imgRun[1] = new Image(charTwoRun2URL.toExternalForm());
 		}
 		else if(character == 3) {
-			imgRun[0] = new Image("./././images/characterThree-run1.png");
-			imgRun[1] = new Image("./././images/characterThree-run2.png");
-		}
-		else {
-			imgRun[0] = new Image("./././images/characterOne-run1.png");
-			imgRun[1] = new Image("./././images/characterOne-run2.png");
+			URL charThreeRun1URL = getClass().getResource("images/characterThree-run1.png");
+			URL charThreeRun2URL = getClass().getResource("images/characterThree-run2.png");
+			imgRun[0] = new Image(charThreeRun1URL.toExternalForm());
+			imgRun[1] = new Image(charThreeRun2URL.toExternalForm());
 		}
 
 		width = imgRun[index].getWidth();
@@ -53,7 +57,8 @@ public class Character {
 
 	public void killEskimo() {
 		isDead = true;
-		imgRun[0] = new Image("./././images/bloodSplatter.png");
+		URL imageBloodSplatURL = getClass().getResource("images/bloodSplatter.png");
+		imgRun[0] = new Image(imageBloodSplatURL.toExternalForm());
 		iview.setImage(imgRun[0]);
 	}
 
@@ -112,7 +117,8 @@ public class Character {
 		
 			return iview;
 		} else {
-			imgRun[0] = new Image("./././images/bloodSplatter.png");
+			URL imageBloodSplatURL = getClass().getResource("images/bloodSplatter.png");
+			imgRun[0] = new Image(imageBloodSplatURL.toExternalForm());
 			iview.setImage(imgRun[0]);
 			return iview;
 		}

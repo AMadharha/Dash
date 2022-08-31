@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -28,7 +29,8 @@ public class titleScreen {
     public static void createAndSet(Stage primaryStage) {
         Pane root = new Pane();
 
-        Image imgBackground = new Image("./././images/titleScreenBackground.png");
+		URL imageBackgroundURL = titleScreen.class.getResource("images/titleScreenBackground.png");
+        Image imgBackground = new Image(imageBackgroundURL.toExternalForm());
         ImageView ivBackground = new ImageView(imgBackground);
         root.getChildren().add(ivBackground);
 
@@ -122,7 +124,7 @@ public class titleScreen {
 	private static int getHighScore() {
 		int highScore = Integer.MIN_VALUE;
 
-		File scoresFile = new File("./././resources/scores.txt");
+		File scoresFile = new File("./scores.txt");
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader(scoresFile));
@@ -158,7 +160,7 @@ public class titleScreen {
 			return highScoreHolders;
 		}
 		
-		File scoresFile = new File("./././resources/scores.txt");
+		File scoresFile = new File("./scores.txt");
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new FileReader(scoresFile));
