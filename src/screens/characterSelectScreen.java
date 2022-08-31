@@ -1,5 +1,7 @@
 package src.screens;
 
+import java.net.URL;
+
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -17,7 +19,8 @@ public class characterSelectScreen {
     public static void createAndSet(Stage primaryStage) {
         Pane root = new Pane();
 
-        Image imgBackground = new Image("./././images/characterSelectBackground.png");
+        URL imageBackgroundURL = characterSelectScreen.class.getResource("images/characterSelectBackground.png");
+        Image imgBackground = new Image(imageBackgroundURL.toExternalForm());
         ImageView ivBackground = new ImageView(imgBackground);
         root.getChildren().add(ivBackground);
 
@@ -35,7 +38,8 @@ public class characterSelectScreen {
         tfName.setAlignment(Pos.CENTER);
         root.getChildren().add(tfName);
 
-        Image imgCharacterOne = new Image("./././images/characterOne.png");
+        URL imageCharOneURL = characterSelectScreen.class.getResource("images/characterOne.png");
+        Image imgCharacterOne = new Image(imageCharOneURL.toExternalForm());
         ImageView ivCharacterOne = new ImageView(imgCharacterOne);
 
         Button btnCharacterOne = new Button();
@@ -53,7 +57,8 @@ public class characterSelectScreen {
         });
         root.getChildren().add(btnCharacterOne);
 
-        Image imgCharacterTwo = new Image("./././images/characterTwo.png");
+        URL imageCharTwoURL = characterSelectScreen.class.getResource("images/characterTwo.png");
+        Image imgCharacterTwo = new Image(imageCharTwoURL.toExternalForm());
         ImageView ivCharacterTwo = new ImageView(imgCharacterTwo);
 
         Button btnCharacterTwo = new Button();
@@ -71,7 +76,8 @@ public class characterSelectScreen {
         });
         root.getChildren().add(btnCharacterTwo);
 
-        Image imgCharacterThree = new Image("./././images/characterThree.png");
+        URL imageCharThreeURL = characterSelectScreen.class.getResource("images/characterThree.png");
+        Image imgCharacterThree = new Image(imageCharThreeURL.toExternalForm());
         ImageView ivCharacterThree = new ImageView(imgCharacterThree);
 
         Button btnCharacterThree = new Button();

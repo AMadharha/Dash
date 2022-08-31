@@ -3,6 +3,7 @@ package src.screens;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -37,7 +38,8 @@ public class gameScreen {
     public static void createAndSet(TextField tfName, int characterNum, Stage primaryStage) {
         Pane root = new Pane();
 
-        Image imgGameBackground = new Image("./././images/gameBackground.png");
+		URL imageBackgroundURL = gameScreen.class.getResource("images/gameBackground.png");
+        Image imgGameBackground = new Image(imageBackgroundURL.toExternalForm());
         ImageView ivGameBackground = new ImageView(imgGameBackground);
         root.getChildren().add(ivGameBackground);
 
@@ -244,7 +246,7 @@ public class gameScreen {
 					}
 
 					try {
-						FileWriter writer = new FileWriter("./././resources/scores.txt", true);
+						FileWriter writer = new FileWriter("./scores.txt", true);
 						BufferedWriter bw = new BufferedWriter(writer);
 						bw.write(tfName.getText() + "=" + score + "\n");
 						bw.close();

@@ -1,5 +1,7 @@
 package src.objects;
 
+import java.net.URL;
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -13,7 +15,8 @@ public class Board {
 		x = 0;
 		y = 0;
 		
-		imgBoard = new Image("./././images/board.png");
+		URL imageBoardURL = getClass().getResource("images/board.png");
+		imgBoard = new Image(imageBoardURL.toExternalForm());
 		iview = new ImageView(imgBoard);
 		iview.setX(x);
 		iview.setY(y);
@@ -27,7 +30,8 @@ public class Board {
 		x = xPos;
 		y = yPos;
 		
-		imgBoard = new Image("./././images/board.png");
+		URL imageBoardURL = getClass().getResource("images/board.png");
+		imgBoard = new Image(imageBoardURL.toExternalForm());
 		iview = new ImageView(imgBoard);
 		iview.setX(x);
 		iview.setY(y);
