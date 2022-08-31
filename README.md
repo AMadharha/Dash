@@ -12,3 +12,7 @@ This is the **title screen**, this is the screen that it brings you to when you 
 This is the **character select screen**, this is where you enter your name and select your character. The character do not have anything unique about them besides then having their own styles! You also must enter your name here, this name cannot be blank and cannot contain a "=". This is the name that is associated with your score.
 
 ![characterSelectImage](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/characterSelectScreen.png "Sample Character Select Screen")
+
+This is sample **gameplay**. It does look slow, but the game quickens as your score goes up, with the max speed reached at 40 score:
+
+![sampleGameplay](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/gameplaySample.gif "Sample Gameplay")
