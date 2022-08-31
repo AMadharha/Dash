@@ -15,7 +15,7 @@ This is the **character select screen**, this is where you enter your name and s
 
 This is sample **gameplay**. It does look slow, but the game quickens as your score goes up, with the max speed reached at 40 score:
 
-[![Demo Gameplay](https://share.gifyoutube.com/KzB6Gb.gif)](https://www.youtube.com/watch?v=VQvs6Y0wWr8)
+Sample Gameplay: https://www.youtube.com/watch?v=VQvs6Y0wWr8&t=9s
 
 Finally, this is the **end screen** when you die in the game. You can either play again or exit the game: 
 
