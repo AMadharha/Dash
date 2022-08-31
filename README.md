@@ -7,16 +7,16 @@ This is a basic game I created using Java, specifically using JavaFX libraries. 
 # Gameplay/Scenes
 This is the **title screen**, this is the screen that it brings you to when you first run the game and play again after you die. You can also check the controls and current high score (local):
 
-![titleScreenImage](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/titleScreen.png "Sample Title Screen")
+![Title Screen Image](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/titleScreen.png "Sample Title Screen")
 
 This is the **character select screen**, this is where you enter your name and select your character. The character do not have anything unique about them besides then having their own styles! You also must enter your name here, this name cannot be blank and cannot contain a "=". This is the name that is associated with your score.
 
-![characterSelectImage](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/characterSelectScreen.png "Sample Character Select Screen")
+![Character Select Image](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/characterSelectScreen.png "Sample Character Select Screen")
 
 This is sample **gameplay**. It does look slow, but the game quickens as your score goes up, with the max speed reached at 40 score:
 
-Sample Gameplay: https://www.youtube.com/watch?v=VQvs6Y0wWr8&t=9s
+![Sample Gameplay](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/gameplaySample.gif "Sample Character Select Screen")
 
 Finally, this is the **end screen** when you die in the game. You can either play again or exit the game: 
 
-![endScreen](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/endScreen.png "End Screen Sample")
+![End Screen Image](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/endScreen.png "End Screen Sample")
