@@ -1,5 +1,7 @@
 package src.objects;
 
+import java.net.URL;
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -13,7 +15,8 @@ public class Train {
 		x = 0;
 		y = 0;
 		
-		imgTrain = new Image("./././images/train.png");
+		URL imageTrainURL = getClass().getResource("images/train.png");
+		imgTrain = new Image(imageTrainURL.toExternalForm());
 		iview = new ImageView(imgTrain);
 		iview.setX(x);
 		iview.setY(y);
@@ -26,7 +29,8 @@ public class Train {
 		x = xPos;
 		y = yPos;
 		
-		imgTrain = new Image("./././images/train.png");
+		URL imageTrainURL = getClass().getResource("images/train.png");
+		imgTrain = new Image(imageTrainURL.toExternalForm());
 		iview = new ImageView(imgTrain);
 		iview.setX(x);
 		iview.setY(y);

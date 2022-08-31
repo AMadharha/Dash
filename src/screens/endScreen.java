@@ -1,5 +1,7 @@
 package src.screens;
 
+import java.net.URL;
+
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,7 +20,8 @@ public class endScreen {
     public static void createAndSet(Stage primaryStage, int score, TextField tfName) {
         Pane root = new Pane();
 
-        Image imgBackground = new Image("./././images/endScreenBackground.png");
+        URL imageBackgroundURL = endScreen.class.getResource("images/endScreenBackground.png");
+        Image imgBackground = new Image(imageBackgroundURL.toExternalForm());
         ImageView ivBackground = new ImageView(imgBackground);
         root.getChildren().add(ivBackground);
 

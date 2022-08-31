@@ -1,5 +1,7 @@
 package src.objects;
 
+import java.net.URL;
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -13,7 +15,8 @@ public class Coin {
 		x = 0;
 		y = 0;
 		
-		imgCoin = new Image("./././images/coin.png");
+		URL imageCoinURL = getClass().getResource("images/coin.png");
+		imgCoin = new Image(imageCoinURL.toExternalForm());
 		iview = new ImageView(imgCoin);
 		iview.setX(x);
 		iview.setY(y);
@@ -26,7 +29,8 @@ public class Coin {
 		x = xPos;
 		y = yPos;
 		
-		imgCoin = new Image("./././images/coin.png");
+		URL imageCoinURL = getClass().getResource("images/coin.png");
+		imgCoin = new Image(imageCoinURL.toExternalForm());
 		iview = new ImageView(imgCoin);
 		iview.setX(x);
 		iview.setY(y);
