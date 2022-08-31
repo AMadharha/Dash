@@ -1,6 +1,3 @@
-# Dash
-Download: [Dash.zip](https://raw.githubusercontent.com/AMadharha/Dash/master/Dash.zip)
-
 # Project Description
 This is a basic game I created using Java, specifically using JavaFX libraries. It's a simple game where you must dodge the obstacles and collect coins to increase your score. The game keeps track of your highscore, so you can keep playing until you beat your personal best!
 
@@ -13,10 +10,19 @@ This is the **character select screen**, this is where you enter your name and s
 
 ![Character Select Image](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/characterSelectScreen.png "Sample Character Select Screen")
 
-This is sample **gameplay**. It does look slow, but the game quickens as your score goes up, with the max speed reached at 40 score:
+This is sample **gameplay**. It starts off slower than it shows in this gif, with the speed increasing as your score goes up. The speed reaches it's max at 40 score (this gif shows the max speed):
 
 ![Gameplay Sample](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/gameplaySample.gif "End Screen Sample")
 
 Finally, this is the **end screen** when you die in the game. You can either play again or exit the game: 
 
 ![End Screen Image](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/endScreen.png "End Screen Sample")
+
+# Project Specifications
+* This project was created and tested using [JavaFX SDK 18.0.2 libraries](https://gluonhq.com/products/javafx/).
+* The JDK used during production and testing was [JDK version 18.0.2.1](https://www.oracle.com/java/technologies/downloads/).
+
+# Download
+## Operating System:
+Windows download: [Dash(Win).zip](https://raw.githubusercontent.com/AMadharha/Dash/master/downloads/Dash(Win).zip) \
+Mac download: Coming Soon
