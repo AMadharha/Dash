@@ -15,4 +15,4 @@ This is the **character select screen**, this is where you enter your name and s
 
 This is sample **gameplay**. It does look slow, but the game quickens as your score goes up, with the max speed reached at 40 score:
 
-![sampleGameplay](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/gameplaySample.gif "Sample Gameplay")
+![sampleGameplay](https://raw.githubusercontent.com/AMadharha/Dash/master/samples/gameplaySample.gif)
