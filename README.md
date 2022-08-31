@@ -1,2 +1,2 @@
 # Dash
-A simple JavaFX game.
+Download: [Dash.zip](https://raw.githubusercontent.com/AMadharha/Dash/master/Dash.zip)
