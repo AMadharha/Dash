@@ -1,3 +1,5 @@
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&style=flat-square)](https://www.linkedin.com/in/ankushmadharha/)
+
 # Project Description
 This is a basic game I created using Java, specifically using JavaFX libraries. It's a simple game where you must dodge the obstacles and collect coins to increase your score. The game keeps track of your highscore, so you can keep playing until you beat your personal best!
 
