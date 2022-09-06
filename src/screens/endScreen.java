@@ -47,7 +47,7 @@ public class endScreen {
         btnPlayAgain.setOnMouseEntered(e -> btnPlayAgain.setStyle("-fx-background-color: lightblue; -fx-border-color: black; -fx-border-width: 3 3 3 3;"));
         btnPlayAgain.setOnMouseExited(e -> btnPlayAgain.setStyle("-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3 3 3 3;"));
         btnPlayAgain.setOnAction(e -> {
-            titleScreen.createAndSet(primaryStage);
+            characterSelectScreen.createAndSet(primaryStage, tfName.getText());
         });
         root.getChildren().add(btnPlayAgain);
         

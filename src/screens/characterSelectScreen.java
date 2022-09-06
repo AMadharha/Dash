@@ -16,7 +16,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class characterSelectScreen {
-    public static void createAndSet(Stage primaryStage) {
+    public static void createAndSet(Stage primaryStage, String name) {
         Pane root = new Pane();
 
         URL imageBackgroundURL = characterSelectScreen.class.getResource("images/characterSelectBackground.png");
@@ -36,6 +36,7 @@ public class characterSelectScreen {
         tfName.setStyle("-fx-border-color: black; -fx-border-width: 3 3 3 3;");
         tfName.setEffect(new DropShadow());
         tfName.setAlignment(Pos.CENTER);
+        tfName.setText(name);
         root.getChildren().add(tfName);
 
         URL imageCharOneURL = characterSelectScreen.class.getResource("images/characterOne.png");

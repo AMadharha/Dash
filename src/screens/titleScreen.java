@@ -46,7 +46,7 @@ public class titleScreen {
 		btnPlay.setEffect(new DropShadow());
 		btnPlay.setOnMouseEntered(e -> btnPlay.setStyle("-fx-background-color: lightblue; -fx-border-color: black; -fx-border-width: 3 3 3 3;"));
 		btnPlay.setOnMouseExited(e -> btnPlay.setStyle("-fx-background-color: white; -fx-border-color: black; -fx-border-width: 3 3 3 3;"));
-		btnPlay.setOnAction(e -> characterSelectScreen.createAndSet(primaryStage));
+		btnPlay.setOnAction(e -> characterSelectScreen.createAndSet(primaryStage, ""));
 
         Button btnControls = new Button();
 		btnControls.setPrefSize(300,80);

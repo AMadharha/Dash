@@ -168,7 +168,7 @@ public class gameScreen {
 						} else {
 							train.setX(500);
 						}
-						train.setY(-300);
+						train.setY(-600);
 					}
 
 					if(coin.getY() >= 650) {
@@ -180,7 +180,7 @@ public class gameScreen {
 						} else {
 							coin.setX(510);
 						}
-						coin.setY(-200);
+						coin.setY(-250);
 					}
 
 					if(player.getNode().getBoundsInParent().intersects(board.getNode().getBoundsInParent()) ||
@@ -207,9 +207,9 @@ public class gameScreen {
 						if(cols == 1) {
 							board.setX(300);
 						} else if(cols == 2) {
-							board.setX(400);
+							board.setX(430);
 						} else {
-							board.setX(500);
+							board.setX(540);
 						}
 						board.setY(-200);
 					}
