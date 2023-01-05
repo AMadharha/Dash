@@ -28,7 +28,7 @@ Finally, this is the **end screen** when you die in the game. You can either pla
 
 # Download
 ## Operating System:
-Windows download: [Dash(Win).zip](https://raw.githubusercontent.com/AMadharha/Dash/master/downloads/Dash(Win).zip) \
+Windows download: [Dash.zip](https://raw.githubusercontent.com/AMadharha/Dash/master/downloads/Dash.zip) \
 Mac download: Coming Soon
 
 ## Downloading Steps:
