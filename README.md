@@ -28,7 +28,7 @@ Finally, this is the **end screen** when you die in the game. You can either pla
 
 # Download
 ## Operating System:
-Windows download: [Dash.zip](https://raw.githubusercontent.com/AMadharha/Dash/master/downloads/Dash.zip) \
+Windows download: [Dash.zip](https://raw.githubusercontent.com/AMadharha/Dash/master/downloads/Dashv1.0.zip) \
 
 ## Downloading Steps:
 1. Download the [JDK version 18.0.2.1](https://www.oracle.com/java/technologies/downloads/). Skip this if you already have it
